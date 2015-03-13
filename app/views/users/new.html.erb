@@ -1,0 +1,23 @@
+<h1>Signup Here!</h1>
+
+<form action="<%= users_url %>" method="post">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+    <label for="user_email">Email Address
+      <input type="text" name="user[email]" id="email">
+    </label>
+  <br>
+
+  <label for="user_password">Password
+    <input type="password" name="user[password]" id="user_password">
+  </label>
+  <br>
+
+  <input type="submit">
+</form>
+
+<br>
+<%= link_to "Sign in to an existing account", new_session_url, method: :get %>
